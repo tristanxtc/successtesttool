@@ -14,18 +14,26 @@ namespace networktesttool
         public Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
         static string text = "Hello";
         public byte[] send_buffer = Encoding.ASCII.GetBytes(text);
-        static  IPAddress serverAddr = IPAddress.Parse(Console.ReadLine());
+
+        public void SetIP()
+        {
+        }
+        static IPAddress serverAddr = IPAddress.Parse(Console.ReadLine());
+
         public IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
 
         public void SendUDP()
         {
             sock.SendTo(send_buffer, endPoint);
-        }
+        }}
+
+
+       
             
        
 
     }
-}
+
             
     
    
