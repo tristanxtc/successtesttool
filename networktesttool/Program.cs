@@ -20,6 +20,7 @@ namespace networktesttool
             //ipstring = System.Console.ReadLine();
 
             Attack attack = new Attack();
+            attack.Setip();
             attack.SendUDP();
         }
     }
